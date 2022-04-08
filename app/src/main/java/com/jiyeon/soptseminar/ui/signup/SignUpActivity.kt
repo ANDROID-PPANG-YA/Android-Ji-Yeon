@@ -1,19 +1,23 @@
-package com.jiyeon.soptseminar
+package com.jiyeon.soptseminar.ui.signup
 
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
+import androidx.lifecycle.ViewModelProvider
+import com.jiyeon.soptseminar.R
 import com.jiyeon.soptseminar.databinding.ActivitySignUpBinding
 
 class SignUpActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivitySignUpBinding
+    private lateinit var viewModel: SignUpViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        binding = DataBindingUtil.setContentView(this,R.layout.activity_sign_up)
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_sign_up)
+        viewModel = ViewModelProvider(this)[SignUpViewModel::class.java]
 
         // 회원가입 완료
         binding.btnSignUp.setOnClickListener {

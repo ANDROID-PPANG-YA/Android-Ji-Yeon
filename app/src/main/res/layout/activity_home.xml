@@ -3,10 +3,16 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <data>
+        <variable
+            name="viewModel"
+            type="com.jiyeon.soptseminar.ui.home.HomeViewModel" />
+    </data>
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".HomeActivity">
+        tools:context=".ui.home.HomeActivity">
 
         <ImageView
             android:id="@+id/iv_profile"
@@ -15,7 +21,7 @@
             android:layout_marginHorizontal="100dp"
             android:layout_marginTop="20dp"
             android:scaleType="fitXY"
-            android:src="@drawable/profile"
+            android:src="@{viewModel.profile}"
             app:layout_constraintDimensionRatio="1:1"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -26,7 +32,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:text="이름: 정지연"
+            android:text="@{viewModel.name}"
             android:textColor="@color/black"
             android:textSize="25sp"
             app:layout_constraintEnd_toEndOf="@+id/iv_profile"
@@ -37,7 +43,7 @@
             android:id="@+id/tv_age"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="나이: 25"
+            android:text="@{viewModel.age}"
             android:textColor="@color/black"
             android:textSize="25sp"
             app:layout_constraintStart_toStartOf="@+id/tv_name"
@@ -47,7 +53,7 @@
             android:id="@+id/tv_mbti"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="MBTI: INFP"
+            android:text="@{viewModel.mbti}"
             android:textColor="@color/black"
             android:textSize="25sp"
             app:layout_constraintStart_toStartOf="@+id/tv_age"
@@ -70,9 +76,10 @@
                 android:orientation="vertical">
 
                 <TextView
+                    android:id="@+id/tv_introduce"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/intro"
+                    android:text="@{viewModel.introduce}"
                     android:textSize="16sp" />
 
             </LinearLayout>
