@@ -19,7 +19,11 @@ class SignUpActivity : AppCompatActivity() {
         binding = DataBindingUtil.setContentView(this, R.layout.activity_sign_up)
         viewModel = ViewModelProvider(this)[SignUpViewModel::class.java]
 
-        // 회원가입 완료
+        initSignUpBtn()
+    }
+
+    // 회원가입 버튼 이벤트
+    private fun initSignUpBtn(){
         binding.btnSignUp.setOnClickListener {
             if (binding.etId.text.isNotEmpty() && binding.etName.text.isNotEmpty() && binding.etPw.text.isNotEmpty()){
                 intent.putExtra("id", binding.etId.text.toString())

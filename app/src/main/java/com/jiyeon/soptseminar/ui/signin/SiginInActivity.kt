@@ -33,7 +33,7 @@ class SiginInActivity : AppCompatActivity() {
 
     }
 
-    // 로그인 버튼 클릭
+    // 로그인 버튼 이벤트
     private fun initLoginBtn() {
         binding.btnLogin.setOnClickListener {
             // 아이디, 비밀번호 공백 여부 체크
@@ -51,7 +51,7 @@ class SiginInActivity : AppCompatActivity() {
         }
     }
 
-    // 회원가입 버튼 클릭
+    // 회원가입 버튼 이벤트
     private fun initSignUpBtn() {
         binding.btnSignUp.setOnClickListener {
             // SignUpActivity 이동
