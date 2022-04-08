@@ -3,6 +3,7 @@ package com.jiyeon.soptseminar
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.databinding.DataBindingUtil
 import com.jiyeon.soptseminar.databinding.ActivitySignUpBinding
 
 class SignUpActivity : AppCompatActivity() {
@@ -12,8 +13,7 @@ class SignUpActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        binding = ActivitySignUpBinding.inflate(layoutInflater)
-        setContentView(binding.root)
+        binding = DataBindingUtil.setContentView(this,R.layout.activity_sign_up)
 
         // 회원가입 완료
         binding.btnSignUp.setOnClickListener {

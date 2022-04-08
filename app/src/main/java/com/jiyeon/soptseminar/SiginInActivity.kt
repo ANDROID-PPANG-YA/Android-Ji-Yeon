@@ -2,12 +2,12 @@ package com.jiyeon.soptseminar
 
 import android.app.Activity
 import android.content.Intent
-import android.net.Uri
 import android.os.Bundle
 import android.widget.Toast
 import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
+import androidx.databinding.DataBindingUtil
 import com.jiyeon.soptseminar.databinding.ActivitySignInBinding
 
 class SiginInActivity : AppCompatActivity() {
@@ -18,8 +18,7 @@ class SiginInActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        binding = ActivitySignInBinding.inflate(layoutInflater)
-        setContentView(binding.root)
+        binding = DataBindingUtil.setContentView(this,R.layout.activity_sign_in)
 
         setResultLauncher()
 
