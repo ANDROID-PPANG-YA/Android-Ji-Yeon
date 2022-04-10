@@ -77,4 +77,11 @@ app:layout_constraintDimensionRatio="1:1"
 ## ⭐ MVVM 구현 방법 설명
 **ViewModel**과 **DataBinding**을 사용하여 간단하게만 구현해보았습니다. 
 1. **LiveData**을 사용해보려 했으나 업데이트 기능이 있는(ex.텍스트 변경됨) ui가 없어서 억지로 넣을 필요가 없다고 판단했습니다. (물론 ui는 자유롭게 꾸며도 된다고 하셨지만 ㅎㅎㅎㅎ 구구절절절절...)
-2. two-way data binding이 필요한 곳은 자기소개 변수들 뿐이라고 생각해서 **HomeViewModel**에만 코드를 넣어주었습니다. 로그인을 한 사람이 누구냐에 따라 계속 바뀌는 ui이기 때문입니다. **다만, SignInViewModel과 SignUpViewModel에도 제가 뭔가 놓치고 있는 것이 있는지 궁금합니다. ㅎㅎ** 
+2. two-way data binding이 필요한 곳은 자기소개 변수들 뿐이라고 생각해서 **HomeViewModel**에만 코드를 넣어주었습니다. 로그인을 한 사람이 누구냐에 따라 계속 바뀌는 ui이기 때문입니다. **다만, SignInViewModel과 SignUpViewModel에도 제가 뭔가 놓치고 있는 것이 있는지 궁금합니다. ㅎㅎ**
+
+## :three: 배운점
+:heavy_check_mark: : ```registerForActivityResult```와 ```constraintDimensionRatio```의 개념과 사용법을 알게 되었습니다.
+
+:heavy_check_mark: : 항상 헷갈렸던 ```DataBinding```과 ```ViewBinding```의 차이를 정확히 이해하는 시간을 가졌습니다.
+
+:heavy_check_mark: ```ViewModel```을 사용해 볼 수 있었습니다
