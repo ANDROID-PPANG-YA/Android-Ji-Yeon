@@ -12,35 +12,22 @@ import androidx.recyclerview.widget.RecyclerView
 import com.jiyeon.soptseminar.R
 import com.jiyeon.soptseminar.data.FollowerData
 import com.jiyeon.soptseminar.databinding.FragmentFollowListBinding
-import com.jiyeon.soptseminar.ui.FollowerAdapter
+import com.jiyeon.soptseminar.adapter.FollowerAdapter
+import com.jiyeon.soptseminar.util.BaseFragment
 import com.jiyeon.soptseminar.util.ItemTouchHelperCallback
 import com.jiyeon.soptseminar.util.VerticalSpaceItemDecoration
+import kotlinx.coroutines.flow.combine
 
 
-class FollowerListFragment : Fragment() {
-
-    private var _binding: FragmentFollowListBinding? = null
-    private val binding get() = _binding!!
+class FollowerListFragment : BaseFragment<FragmentFollowListBinding>(R.layout.fragment_follow_list) {
 
     private lateinit var followerAdapter: FollowerAdapter
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        _binding =
-            DataBindingUtil.inflate(layoutInflater, R.layout.fragment_follow_list, container, false)
-
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
         initAdapter()
         decoRVItem()
         itemEvent()
-
-        return binding.root
-    }
-
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _binding = null
     }
 
     // adapter 초기화

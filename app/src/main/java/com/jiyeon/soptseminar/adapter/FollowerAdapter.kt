@@ -1,4 +1,4 @@
-package com.jiyeon.soptseminar.ui
+package com.jiyeon.soptseminar.adapter
 
 import android.content.Context
 import android.view.LayoutInflater

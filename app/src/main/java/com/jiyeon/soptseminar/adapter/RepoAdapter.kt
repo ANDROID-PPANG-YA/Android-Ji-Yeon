@@ -1,4 +1,4 @@
-package com.jiyeon.soptseminar.ui
+package com.jiyeon.soptseminar.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -12,7 +12,7 @@ class RepoAdapter() : RecyclerView.Adapter<RepoAdapter.RepoViewHolder>(), ItemTo
 
     val repoList = mutableListOf<RepoData>()
 
-    private lateinit var dragListener: RepoAdapter.OnStartDragListener
+    private lateinit var dragListener: OnStartDragListener
 
     // 아이템 이동,삭제 이벤트
     interface OnStartDragListener {
@@ -35,7 +35,7 @@ class RepoAdapter() : RecyclerView.Adapter<RepoAdapter.RepoViewHolder>(), ItemTo
         this.dragListener = listener
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RepoAdapter.RepoViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RepoViewHolder {
         val binding =
             ItemRepoListBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return RepoViewHolder(binding)
