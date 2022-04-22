@@ -6,6 +6,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@drawable/rectangle_stroke_purple_radius_12"
         android:padding="10dp">
 
         <ImageView
@@ -13,7 +14,7 @@
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_marginEnd="10dp"
-            android:src="@drawable/profile_jiyeon"
+            tools:src="@drawable/profile_jiyeon"
             app:layout_constraintEnd_toStartOf="@id/tv_name"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -22,7 +23,7 @@
             android:id="@+id/tv_name"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="정지연"
+            tools:text="정지연"
             android:textColor="@color/black"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/iv_profile"
@@ -32,7 +33,9 @@
             android:id="@+id/tv_introduce"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="안녕하세요. 정지연입니다."
+            tools:text="안녕하세요. 정지연입니다."
+            android:maxLines="1"
+            android:ellipsize="end"
             app:layout_constraintBottom_toBottomOf="@+id/iv_profile"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="@id/tv_name"
