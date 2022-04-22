@@ -7,10 +7,14 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.ItemTouchHelper
+import androidx.recyclerview.widget.RecyclerView
 import com.jiyeon.soptseminar.R
 import com.jiyeon.soptseminar.data.FollowerData
 import com.jiyeon.soptseminar.databinding.FragmentFollowListBinding
 import com.jiyeon.soptseminar.ui.FollowerAdapter
+import com.jiyeon.soptseminar.util.ItemTouchHelperCallback
+import com.jiyeon.soptseminar.util.VerticalSpaceItemDecoration
 
 
 class FollowerListFragment : Fragment() {
@@ -28,6 +32,8 @@ class FollowerListFragment : Fragment() {
             DataBindingUtil.inflate(layoutInflater, R.layout.fragment_follow_list, container, false)
 
         initAdapter()
+        decoRVItem()
+        itemEvent()
 
         return binding.root
     }
@@ -55,7 +61,16 @@ class FollowerListFragment : Fragment() {
         )
 
         followerAdapter.notifyDataSetChanged()
+    }
 
+    // 간격 넣기
+    private fun decoRVItem(){
+        val spaceDecoration = VerticalSpaceItemDecoration(50)
+        binding.rvFollow.addItemDecoration(spaceDecoration)
+    }
+
+    // 아이템 이벤트
+    private fun itemEvent(){
         // 상세보기 화면으로 이동하는 클릭 이벤트
         followerAdapter.setOnItemClickListener(object : FollowerAdapter.OnItemClickListener {
             override fun onItemClick(v: View, data: FollowerData, pos: Int) {
@@ -68,7 +83,22 @@ class FollowerListFragment : Fragment() {
             }
 
         })
-    }
 
+        // 아이템 이동,삭제 이벤트
+        val callback = ItemTouchHelperCallback(followerAdapter)
+        val touchHelper = ItemTouchHelper(callback)
+
+        touchHelper.attachToRecyclerView(binding.rvFollow)
+        binding.rvFollow.adapter = followerAdapter
+
+        followerAdapter.startDrag(object : FollowerAdapter.OnStartDragListener {
+            override fun onStartDrag(viewHolder: RecyclerView.ViewHolder) {
+                touchHelper.startDrag(viewHolder)
+            }
+        })
+
+
+
+    }
 
 }

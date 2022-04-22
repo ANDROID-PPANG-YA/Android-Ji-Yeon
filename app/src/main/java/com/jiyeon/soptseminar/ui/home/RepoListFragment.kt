@@ -6,10 +6,13 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.ItemTouchHelper
+import androidx.recyclerview.widget.RecyclerView
 import com.jiyeon.soptseminar.R
 import com.jiyeon.soptseminar.data.RepoData
 import com.jiyeon.soptseminar.databinding.FragmentRepoListBinding
 import com.jiyeon.soptseminar.ui.RepoAdapter
+import com.jiyeon.soptseminar.util.ItemTouchHelperCallback
 
 
 class RepoListFragment : Fragment() {
@@ -25,6 +28,7 @@ class RepoListFragment : Fragment() {
         _bining = DataBindingUtil.inflate(layoutInflater,R.layout.fragment_repo_list,container,false)
 
         initAdapter()
+        itemEvent()
 
         return binding.root
     }
@@ -48,5 +52,21 @@ class RepoListFragment : Fragment() {
         )
 
         repoAdapter.notifyDataSetChanged()
+    }
+
+    // 아이템 이벤트
+    private fun itemEvent(){
+        // 아이템 이동,삭제 이벤트
+        val callback = ItemTouchHelperCallback(repoAdapter)
+        val touchHelper = ItemTouchHelper(callback)
+
+        touchHelper.attachToRecyclerView(binding.rvRepo)
+        binding.rvRepo.adapter = repoAdapter
+
+        repoAdapter.startDrag(object : RepoAdapter.OnStartDragListener {
+            override fun onStartDrag(viewHolder: RecyclerView.ViewHolder) {
+                touchHelper.startDrag(viewHolder)
+            }
+        })
     }
 }
