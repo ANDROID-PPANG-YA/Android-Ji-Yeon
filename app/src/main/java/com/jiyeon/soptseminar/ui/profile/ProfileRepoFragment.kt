@@ -1,9 +1,10 @@
-package com.jiyeon.soptseminar
+package com.jiyeon.soptseminar.ui.profile
 
 import android.os.Bundle
 import android.view.View
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.jiyeon.soptseminar.R
 import com.jiyeon.soptseminar.adapter.ProfileRepoAdapter
 import com.jiyeon.soptseminar.data.ProfileRepoData
 import com.jiyeon.soptseminar.databinding.FragmentProfileRepoBinding
@@ -17,7 +18,6 @@ class ProfileRepoFragment : BaseFragment<FragmentProfileRepoBinding>(R.layout.fr
         super.onViewCreated(view, savedInstanceState)
         initAdapter()
     }
-
 
     private fun initAdapter(){
         repoAdapter = ProfileRepoAdapter()

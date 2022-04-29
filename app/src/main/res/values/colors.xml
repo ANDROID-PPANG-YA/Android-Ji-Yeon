@@ -15,6 +15,7 @@
     
     <color name="thesopt_deepgray">#444444</color>
     <color name="thesopt_morelightgray">#FAF8FF</color>
+    <color name="thesopt_light_gray">#FAFAFA</color>
     <color name="sopt_white">#FFFFFF</color>
     <color name="sopt_black">#333333</color>
     <color name="thesopt_darkgray">#727272</color>

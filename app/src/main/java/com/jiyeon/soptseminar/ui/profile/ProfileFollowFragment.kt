@@ -1,10 +1,10 @@
-package com.jiyeon.soptseminar
+package com.jiyeon.soptseminar.ui.profile
 
 import android.os.Bundle
 import android.view.View
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
+import com.jiyeon.soptseminar.R
 import com.jiyeon.soptseminar.adapter.ProfileFollowerAdapter
 import com.jiyeon.soptseminar.data.ProfileFollowData
 import com.jiyeon.soptseminar.databinding.FragmentProfileFollowBinding

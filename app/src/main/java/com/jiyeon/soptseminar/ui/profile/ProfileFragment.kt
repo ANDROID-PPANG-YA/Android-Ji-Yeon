@@ -1,7 +1,8 @@
-package com.jiyeon.soptseminar
+package com.jiyeon.soptseminar.ui.profile
 
 import android.os.Bundle
 import android.view.View
+import com.jiyeon.soptseminar.R
 import com.jiyeon.soptseminar.databinding.FragmentProfileBinding
 import com.jiyeon.soptseminar.util.BaseFragment
 

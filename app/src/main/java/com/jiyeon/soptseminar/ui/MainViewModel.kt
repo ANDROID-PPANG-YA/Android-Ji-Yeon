@@ -1,4 +1,4 @@
-package com.jiyeon.soptseminar
+package com.jiyeon.soptseminar.ui
 
 import androidx.lifecycle.ViewModel
 

@@ -1,10 +1,10 @@
-package com.jiyeon.soptseminar
+package com.jiyeon.soptseminar.adapter
 
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
 import androidx.viewpager2.adapter.FragmentStateAdapter
 
-class HomeViewPagerAdapter(fragmentActivity:FragmentActivity):FragmentStateAdapter(fragmentActivity){
+class NaviViewPagerAdapter(fragmentActivity:FragmentActivity):FragmentStateAdapter(fragmentActivity){
 
     val fragments = mutableListOf<Fragment>()
 

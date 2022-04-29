@@ -1,3 +1,5 @@
+package com.jiyeon.soptseminar.ui.camera
+
 import com.jiyeon.soptseminar.R
 import com.jiyeon.soptseminar.databinding.FragmentCameraBinding
 import com.jiyeon.soptseminar.util.BaseFragment
