@@ -2,8 +2,8 @@
     <!-- Base application theme. -->
     <style name="Theme.SoptSeminar" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/sopt_main_color</item>
-        <item name="colorPrimaryVariant">@color/sopt_main_color</item>
+        <item name="colorPrimary">@color/sopt_white</item>
+        <item name="colorPrimaryVariant">@color/sopt_white</item>
         <item name="colorOnPrimary">@color/white</item>
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/teal_200</item>
@@ -14,5 +14,6 @@
         <!-- Customize your theme here. -->
         <item name="windowNoTitle">true</item>
         <item name="windowActionBar">false</item>
+        <item name="android:includeFontPadding">false</item>
     </style>
 </resources>

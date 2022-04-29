@@ -9,4 +9,10 @@
 
     <string name="follow_list">팔로우 \n리스트</string>
     <string name="repo_list">레파지토리 \n리스트</string>
+
+
+    <string name="my_name">JeongJiYeon</string>
+    <string name="my_insta">\u0040stop_kite98</string>
+    <string name="my_intro">개발자 꿈나무</string>
+
 </resources>

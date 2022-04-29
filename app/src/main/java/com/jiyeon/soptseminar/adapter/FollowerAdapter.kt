@@ -4,6 +4,8 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.recyclerview.widget.AsyncListDiffer
+import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.jiyeon.soptseminar.data.FollowerData
@@ -19,6 +21,8 @@ class FollowerAdapter(context: Context) : RecyclerView.Adapter<FollowerAdapter.F
 
     private lateinit var dragListener: OnStartDragListener
     private var listener : OnItemClickListener? = null
+
+
 
     // 아이템 클릭이벤트
     interface OnItemClickListener{
@@ -81,6 +85,7 @@ class FollowerAdapter(context: Context) : RecyclerView.Adapter<FollowerAdapter.F
             }
         }
     }
+
 
 
 }

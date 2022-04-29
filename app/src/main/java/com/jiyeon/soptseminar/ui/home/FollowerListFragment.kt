@@ -43,9 +43,10 @@ class FollowerListFragment : BaseFragment<FragmentFollowListBinding>(R.layout.fr
                 ),
                 FollowerData(R.drawable.profile_jaehun, "조재훈", "안드로이드 OB 조재훈입니다."),
                 FollowerData(R.drawable.profile_jimin, "유지민", "안드로이드 YB 유지민입니다."),
-                FollowerData(R.drawable.profile_jiyoung, "양지영", "안드로이드 YB 양지영입니다.")
+                FollowerData(R.drawable.profile_jiyoung, "양지영", "안드로이드 YB 양지영입니다."),
             )
         )
+
 
         followerAdapter.notifyDataSetChanged()
     }

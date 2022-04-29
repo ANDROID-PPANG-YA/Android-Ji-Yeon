@@ -52,6 +52,5 @@ class HomeActivity : BaseActivity<ActivityHomeBinding, HomeViewModel>(
             supportFragmentManager.beginTransaction().replace(R.id.fragment_home, repoListFragment)
                 .commit()
         }
-
     }
 }
