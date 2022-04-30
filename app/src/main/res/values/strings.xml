@@ -6,10 +6,8 @@
     <string name="mbti">MBTI</string>
     <string name="intro">설명</string>
 
-
     <string name="follow_list">팔로우 \n리스트</string>
     <string name="repo_list">레파지토리 \n리스트</string>
-
 
     <string name="my_name">JeongJiYeon</string>
     <string name="my_insta">\u0040stop_kite98</string>
@@ -17,7 +15,8 @@
 
     <string name="github">GitHub</string>
     <string name="prepare">준비중입니다</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    
+    <string name="photo_info">사진을 첨부해주세요</string>
+    <string name="photo_input">첨부하기</string>
 
 </resources>
