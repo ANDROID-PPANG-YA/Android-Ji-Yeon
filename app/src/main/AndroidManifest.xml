@@ -9,10 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.SoptSeminar">
-        <activity android:name=".ui.signup.SignUpActivity"></activity>
-        <activity android:name=".ui.home.HomeActivity" />
+        <activity android:name=".ui.home.DetailActivity" />
+        <activity android:name=".ui.signup.SignUpActivity" />
         <activity
-            android:name=".ui.signin.SiginInActivity"
+            android:name=".ui.home.HomeActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -20,6 +20,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".ui.signin.SiginInActivity" />
     </application>
 
 </manifest>
