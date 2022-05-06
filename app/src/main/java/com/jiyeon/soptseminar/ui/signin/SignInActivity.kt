@@ -11,10 +11,11 @@ import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProvider
 import com.jiyeon.soptseminar.R
 import com.jiyeon.soptseminar.databinding.ActivitySignInBinding
+import com.jiyeon.soptseminar.ui.MainActivity
 import com.jiyeon.soptseminar.ui.home.HomeActivity
 import com.jiyeon.soptseminar.ui.signup.SignUpActivity
 
-class SiginInActivity : AppCompatActivity() {
+class SignInActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivitySignInBinding
     private lateinit var viewModel: SignInViewModel
@@ -43,7 +44,7 @@ class SiginInActivity : AppCompatActivity() {
                 Toast.makeText(this, "로그인 성공", Toast.LENGTH_SHORT).show()
 
                 // HomeActivity 이동
-                startActivity(Intent(this, HomeActivity::class.java))
+                startActivity(Intent(this, MainActivity::class.java))
 
             } else { // 공백 o
                 Toast.makeText(this, "아이디/비밀번호를 확인해주세요", Toast.LENGTH_SHORT).show()
