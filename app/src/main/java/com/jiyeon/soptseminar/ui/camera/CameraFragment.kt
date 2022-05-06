@@ -37,20 +37,15 @@ class CameraFragment : BaseFragment<FragmentCameraBinding>(R.layout.fragment_cam
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        requestPermission()
         getPhotoFromGallery()
-        initGalleryEvent()
-    }
-
-    // 갤러리 열기 이벤트
-    private fun initGalleryEvent(){
-        binding.btnInputPhoto.setOnClickListener {
-            requestPermission()
-        }
     }
 
     // 권한 요청 함수
-    private fun requestPermission() {
-        requestPermissionLauncher.launch(Manifest.permission.READ_EXTERNAL_STORAGE)
+    private fun requestPermission(){
+        binding.btnInputPhoto.setOnClickListener {
+            requestPermissionLauncher.launch(Manifest.permission.READ_EXTERNAL_STORAGE)
+        }
     }
 
     // 갤러리 사진 결과 반환 로직
@@ -69,7 +64,6 @@ class CameraFragment : BaseFragment<FragmentCameraBinding>(R.layout.fragment_cam
                 }
             }
     }
-
 
     // 갤러리 열기
     private fun openGallery(){
