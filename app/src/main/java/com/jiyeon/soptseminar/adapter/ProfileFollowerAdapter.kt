@@ -9,7 +9,7 @@ import com.jiyeon.soptseminar.databinding.ItemProfileFollowListBinding
 
 class ProfileFollowerAdapter: RecyclerView.Adapter<ProfileFollowerAdapter.ProfileFollowerHolder>() {
 
-    val followList= mutableListOf<ProfileFollowData>()
+    var followList= mutableListOf<ProfileFollowData>()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ProfileFollowerHolder {
         val binding = ItemProfileFollowListBinding.inflate(LayoutInflater.from(parent.context), parent, false)
@@ -24,7 +24,7 @@ class ProfileFollowerAdapter: RecyclerView.Adapter<ProfileFollowerAdapter.Profil
 
     inner class ProfileFollowerHolder(private var binding:ItemProfileFollowListBinding):RecyclerView.ViewHolder(binding.root){
         fun onBind(data:ProfileFollowData){
-            Glide.with(binding.root).load(data.profile).circleCrop().into(binding.ivProfile)
+            Glide.with(binding.root).load(data.profile_url).circleCrop().into(binding.ivProfile)
             binding.tvName.text = data.name
             binding.tvIntro.text = data.Intro
         }

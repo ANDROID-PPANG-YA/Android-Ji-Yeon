@@ -11,12 +11,12 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProvider
 import com.jiyeon.soptseminar.R
-import com.jiyeon.soptseminar.network.RequestSignIn
-import com.jiyeon.soptseminar.network.ResponseSignIn
+import com.jiyeon.soptseminar.data.reponse.ResponseSignIn
+import com.jiyeon.soptseminar.data.request.RequestSignIn
 import com.jiyeon.soptseminar.databinding.ActivitySignInBinding
+import com.jiyeon.soptseminar.network.ServiceCreator
 import com.jiyeon.soptseminar.ui.MainActivity
 import com.jiyeon.soptseminar.ui.signup.SignUpActivity
-import com.jiyeon.soptseminar.network.ServiceCreator
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response

@@ -7,8 +7,8 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProvider
 import com.jiyeon.soptseminar.R
-import com.jiyeon.soptseminar.network.RequestSignUp
-import com.jiyeon.soptseminar.network.ResponseSignUp
+import com.jiyeon.soptseminar.data.reponse.ResponseSignUp
+import com.jiyeon.soptseminar.data.request.RequestSignUp
 import com.jiyeon.soptseminar.databinding.ActivitySignUpBinding
 import com.jiyeon.soptseminar.network.ServiceCreator
 import retrofit2.Call
