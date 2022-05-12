@@ -1,6 +1,5 @@
-package com.jiyeon.soptseminar.week4
+package com.jiyeon.soptseminar.network
 
-import com.jiyeon.soptseminar.SoptService
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
@@ -12,5 +11,5 @@ object ServiceCreator {
         .addConverterFactory(GsonConverterFactory.create())
         .build()
 
-    val soptService:SoptService = retrofit.create(SoptService::class.java)
+    val soptService: SoptService = retrofit.create(SoptService::class.java)
 }

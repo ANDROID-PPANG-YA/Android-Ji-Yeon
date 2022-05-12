@@ -23,9 +23,12 @@
     <string name="pw">비밀번호</string>
     <string name="login">로그인</string>
     <string name="register">회원가입</string>
+    <string name="email">이메일</string>
+    <string name="id">아이디</string>
 
     <string name="hint_name">이름을 입력해주세요.</string>
     <string name="hint_id">깃허브 아이디를 입력해주세요.</string>
+    <string name="hint_email">이메일을 입력해주세요.</string>
     <string name="hint_pw">비밀번호를 입력해주세요.</string>
 
 
