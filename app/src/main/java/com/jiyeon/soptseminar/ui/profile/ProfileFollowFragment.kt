@@ -3,7 +3,6 @@ package com.jiyeon.soptseminar.ui.profile
 import android.os.Bundle
 import android.util.Log
 import android.view.View
-import android.widget.Toast
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.jiyeon.soptseminar.R

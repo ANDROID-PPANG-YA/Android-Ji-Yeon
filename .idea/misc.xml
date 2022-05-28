@@ -9,10 +9,16 @@
         <entry key="..\:/Users/Lenovo/SoptSeminar/app/src/main/res/drawable/rectangle_stroke_purple_fill_white_radius_5.xml" value="0.119" />
         <entry key="..\:/Users/Lenovo/SoptSeminar/app/src/main/res/drawable/selector_list_btn.xml" value="0.2425" />
         <entry key="..\:/Users/Lenovo/SoptSeminar/app/src/main/res/drawable/selector_login_etv.xml" value="0.2425" />
+        <entry key="..\:/Users/Lenovo/SoptSeminar/app/src/main/res/layout/activity_navi.xml" value="0.10572916666666667" />
         <entry key="..\:/Users/Lenovo/SoptSeminar/app/src/main/res/layout/activity_sign_in.xml" value="0.19972826086956522" />
         <entry key="..\:/Users/Lenovo/SoptSeminar/app/src/main/res/layout/activity_sign_up.xml" value="0.2" />
         <entry key="..\:/Users/Lenovo/SoptSeminar/app/src/main/res/layout/fragment_camera.xml" value="0.1" />
         <entry key="..\:/Users/Lenovo/SoptSeminar/app/src/main/res/layout/fragment_home.xml" value="0.19429347826086957" />
+        <entry key="..\:/Users/Lenovo/SoptSeminar/app/src/main/res/layout/fragment_navi.xml" value="0.1403985507246377" />
+        <entry key="..\:/Users/Lenovo/SoptSeminar/app/src/main/res/layout/fragment_sample1.xml" value="0.2" />
+        <entry key="..\:/Users/Lenovo/SoptSeminar/app/src/main/res/layout/fragment_sample2.xml" value="0.12386018237082067" />
+        <entry key="..\:/Users/Lenovo/SoptSeminar/app/src/main/res/layout/fragmnet_sample3.xml" value="0.12386018237082067" />
+        <entry key="..\:/Users/Lenovo/SoptSeminar/app/src/main/res/layout/framgent_sample1.xml" value="0.1403985507246377" />
       </map>
     </option>
   </component>

@@ -66,4 +66,8 @@ dependencies {
 
     // gson
     implementation "com.google.code.gson:gson:2.8.6"
+
+    // navigation 라이브러리
+    implementation "androidx.navigation:navigation-fragment-ktx:2.4.2"
+    implementation "androidx.navigation:navigation-ui-ktx:2.4.2"
 }

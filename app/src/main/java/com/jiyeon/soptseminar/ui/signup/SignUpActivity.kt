@@ -10,6 +10,7 @@ import com.jiyeon.soptseminar.R
 import com.jiyeon.soptseminar.data.reponse.ResponseSignUp
 import com.jiyeon.soptseminar.data.request.RequestSignUp
 import com.jiyeon.soptseminar.databinding.ActivitySignUpBinding
+import com.jiyeon.soptseminar.enqueueUtil
 import com.jiyeon.soptseminar.network.ServiceCreator
 import retrofit2.Call
 import retrofit2.Callback
@@ -52,35 +53,22 @@ class SignUpActivity : AppCompatActivity() {
 
         val call: Call<ResponseSignUp> = ServiceCreator.soptService.postRegister(requestSignUp)
 
-        call.enqueue(object : Callback<ResponseSignUp> {
-            override fun onResponse(
-                call: Call<ResponseSignUp>,
-                response: Response<ResponseSignUp>
-            ) {
-                if (response.isSuccessful) { // 회원가입 성공
-
-                    Toast.makeText(this@SignUpActivity, "회원가입에 성공하셨습니다.", Toast.LENGTH_SHORT)
-                        .show()
-                    intent.putExtra("id", binding.etId.text.toString())
-                    intent.putExtra("pw", binding.etPw.text.toString())
-                    setResult(RESULT_OK, intent)
-                    finish() // 화면닫기
-
-                } else { // 회원가입 실패
-                    when (response.code()) {
-                        409 -> {
-                            Toast.makeText(this@SignUpActivity, "이미 존재하는 회원입니다.", Toast.LENGTH_SHORT).show()
-                        }
-                        else -> {
-                            Toast.makeText(this@SignUpActivity, "회원가입에 실패하셨습니다.", Toast.LENGTH_SHORT).show()
-                        }
-                    }
+        call.enqueueUtil(
+            onSuccess = {
+                Toast.makeText(this@SignUpActivity, "회원가입에 성공하셨습니다.", Toast.LENGTH_SHORT)
+                    .show()
+                intent.putExtra("id", binding.etId.text.toString())
+                intent.putExtra("pw", binding.etPw.text.toString())
+                setResult(RESULT_OK, intent)
+                finish() // 화면닫기
+            },
+            onError = {
+                if (it == 409) {
+                    Toast.makeText(this@SignUpActivity, "이미 존재하는 회원입니다.", Toast.LENGTH_SHORT).show()
+                } else {
+                    Toast.makeText(this@SignUpActivity, "회원가입에 실패하셨습니다.", Toast.LENGTH_SHORT).show()
                 }
             }
-
-            override fun onFailure(call: Call<ResponseSignUp>, t: Throwable) {
-                Log.e("NetworkTest", "error:$t")
-            }
-        })
+        )
     }
 }
