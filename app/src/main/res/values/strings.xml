@@ -6,7 +6,27 @@
     <string name="mbti">MBTI</string>
     <string name="intro">설명</string>
 
-
     <string name="follow_list">팔로우 \n리스트</string>
     <string name="repo_list">레파지토리 \n리스트</string>
+
+    <string name="my_name">JeongJiYeon</string>
+    <string name="my_insta">\u0040stop_kite98</string>
+    <string name="my_intro">개발자 꿈나무</string>
+
+    <string name="github">GitHub</string>
+    <string name="prepare">준비중입니다</string>
+    
+    <string name="photo_info">사진을 첨부해주세요</string>
+    <string name="photo_input">첨부하기</string>
+
+    <string name="github_id">깃허브 아이디</string>
+    <string name="pw">비밀번호</string>
+    <string name="login">로그인</string>
+    <string name="register">회원가입</string>
+
+    <string name="hint_name">이름을 입력해주세요.</string>
+    <string name="hint_id">깃허브 아이디를 입력해주세요.</string>
+    <string name="hint_pw">비밀번호를 입력해주세요.</string>
+
+
 </resources>

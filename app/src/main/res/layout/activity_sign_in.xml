@@ -7,16 +7,14 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".ui.signin.SiginInActivity">
+        tools:context=".ui.signin.SignInActivity">
 
-        <TextView
+        <ImageView
             android:id="@+id/tv_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:text="SOPT"
-            android:textSize="32sp"
-            android:textStyle="bold"
+            android:layout_marginTop="40dp"
+            android:src="@drawable/img_github"
             app:layout_constraintBottom_toTopOf="@id/tv_id"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -26,10 +24,14 @@
             android:id="@+id/tv_id"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="16dp"
-            android:text="아이디"
-            android:textSize="16sp"
-            android:textStyle="bold"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="40dp"
+            android:fontFamily="@font/noto_sans_kr"
+            android:text="@string/github_id"
+            android:textColor="@color/black"
+            android:textFontWeight="700"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toTopOf="@id/et_id"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tv_title" />
@@ -37,9 +39,14 @@
         <EditText
             android:id="@+id/et_id"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
+            android:layout_height="44dp"
+            android:layout_marginTop="6dp"
+            android:background="@drawable/selector_login_etv"
+            android:fontFamily="@font/noto_sans_kr"
             android:hint="아이디를 입력해주세요."
+            android:paddingHorizontal="16dp"
+            android:textFontWeight="400"
+            app:layout_constraintBottom_toTopOf="@+id/tv_pw"
             app:layout_constraintEnd_toEndOf="@id/tv_id"
             app:layout_constraintStart_toStartOf="@id/tv_id"
             app:layout_constraintTop_toBottomOf="@id/tv_id" />
@@ -48,10 +55,13 @@
             android:id="@+id/tv_pw"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:text="비밀번호"
-            android:textSize="16sp"
-            android:textStyle="bold"
+            android:layout_marginTop="34dp"
+            android:fontFamily="@font/noto_sans_kr"
+            android:text="@string/pw"
+            android:textColor="@color/black"
+            android:textFontWeight="700"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toTopOf="@id/et_pw"
             app:layout_constraintEnd_toEndOf="@id/et_id"
             app:layout_constraintStart_toStartOf="@id/et_id"
             app:layout_constraintTop_toBottomOf="@id/et_id" />
@@ -59,37 +69,45 @@
         <EditText
             android:id="@+id/et_pw"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
+            android:layout_height="44dp"
+            android:layout_marginTop="6dp"
+            android:background="@drawable/selector_login_etv"
+            android:fontFamily="@font/noto_sans_kr"
             android:hint="비밀번호를 입력해주세요."
             android:inputType="textPassword"
-            app:layout_constraintBottom_toTopOf="@id/btn_login"
+            android:paddingHorizontal="16dp"
+            android:textFontWeight="400"
             app:layout_constraintEnd_toEndOf="@id/tv_pw"
             app:layout_constraintStart_toStartOf="@id/tv_pw"
             app:layout_constraintTop_toBottomOf="@id/tv_pw" />
 
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btn_login"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:layout_marginBottom="328dp"
-            android:backgroundTint="#6300F0"
-            android:text="LOGIN"
+            android:layout_height="46dp"
+            android:background="@drawable/rectanlge_fill_purple_radius_5"
+            android:fontFamily="@font/noto_sans_kr"
+            android:text="@string/login"
+            android:textColor="@color/white"
+            android:textFontWeight="700"
+            android:layout_marginBottom="7dp"
             app:layout_constraintBottom_toTopOf="@+id/btn_sign_up"
             app:layout_constraintEnd_toEndOf="@id/et_pw"
-            app:layout_constraintStart_toStartOf="@id/et_pw"
-            app:layout_constraintTop_toBottomOf="@id/et_pw" />
+            app:layout_constraintStart_toStartOf="@id/et_pw" />
 
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btn_sign_up"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:backgroundTint="#8CC34B"
-            android:text="회원가입"
-            app:layout_constraintEnd_toEndOf="@id/btn_login"
+            android:layout_height="46dp"
+            android:background="@drawable/rectangle_fill_sub_purple_radius_5"
+            android:fontFamily="@font/noto_sans_kr"
+            android:text="@string/register"
+            android:textColor="@color/white"
+            android:textFontWeight="700"
+            android:layout_marginBottom="21dp"
             app:layout_constraintStart_toStartOf="@id/btn_login"
-            app:layout_constraintTop_toBottomOf="@id/btn_login" />
+            app:layout_constraintEnd_toEndOf="@id/btn_login"
+            app:layout_constraintBottom_toBottomOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
