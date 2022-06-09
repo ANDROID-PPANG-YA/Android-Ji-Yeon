@@ -8,7 +8,7 @@ import com.jiyeon.soptseminar.databinding.ItemProfileRepoListBinding
 
 class ProfileRepoAdapter: RecyclerView.Adapter<ProfileRepoAdapter.ProfileRepoHolder>() {
 
-    val repoList= mutableListOf<ProfileRepoData>()
+    var repoList= mutableListOf<ProfileRepoData>()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ProfileRepoAdapter.ProfileRepoHolder {
         val binding = ItemProfileRepoListBinding.inflate(LayoutInflater.from(parent.context), parent, false)

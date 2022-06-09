@@ -27,7 +27,7 @@
             android:layout_marginHorizontal="20dp"
             android:layout_marginTop="40dp"
             android:fontFamily="@font/noto_sans_kr"
-            android:text="@string/github_id"
+            android:text="@string/id"
             android:textColor="@color/black"
             android:textFontWeight="700"
             android:textSize="14sp"
