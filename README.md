@@ -1,7 +1,7 @@
 # Seminar7
 ## 1️⃣ 필수과제
 ## 자동로그인 구현
-https://user-images.githubusercontent.com/62979643/173095780-26bbe135-2e26-4031-8944-130204a33dcd.mov
+[7차 세미나 영상](https://user-images.githubusercontent.com/62979643/173099570-4c12e213-c397-4574-87f7-f3043ea2c28b.mov)
 
 + SignInActivtiy에 자동로그인 함수 구현
 + get 구현: 액티비티 실행시 로그인 여부를 체크해준다.
