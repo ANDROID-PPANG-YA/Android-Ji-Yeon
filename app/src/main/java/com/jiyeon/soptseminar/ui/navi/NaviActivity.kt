@@ -1,9 +1,7 @@
 package com.jiyeon.soptseminar.ui.navi
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
-import com.jiyeon.soptseminar.R
+import androidx.appcompat.app.AppCompatActivity
 import com.jiyeon.soptseminar.databinding.ActivityNaviBinding
 
 class NaviActivity : AppCompatActivity() {
