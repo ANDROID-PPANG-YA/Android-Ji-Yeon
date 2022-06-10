@@ -1,3 +1,56 @@
+# Seminar7
+## 1️⃣ 필수과제
+## 자동로그인 구현
+https://user-images.githubusercontent.com/62979643/173095780-26bbe135-2e26-4031-8944-130204a33dcd.mov
+
++ SignInActivtiy에 자동로그인 함수 구현
++ get 구현: 액티비티 실행시 로그인 여부를 체크해준다.
+```kotlin
+  private fun isAutoLogin(){
+        SOPTSharedPreferences.init(this)
+
+        if(SOPTSharedPreferences.getAutoLogin(this)){
+
+            Toast.makeText(this, "자동로그인 되었습니다.", Toast.LENGTH_SHORT).show()
+
+            // MainActivity 이동
+            startActivity(Intent(this@SignInActivity, MainActivity::class.java))
+        }
+    }
+```
+
++ set 구현 : 최초 로그인 성공 시(=서버 통신 성공 시) pref에서 로그인 정보를 true로 저장해둔다.
+```kotlin
+     // 토스트 메세지 출력
+                    Toast.makeText(this@SignInActivity, "${data?.email}님 반갑습니다.", Toast.LENGTH_SHORT).show()
+
+                    // MainActivity 이동
+                    startActivity(Intent(this@SignInActivity, MainActivity::class.java))
+
+                    // 자동 로그인 연결
+                    SOPTSharedPreferences.setAutoLogin(true)
+```
+
++ ProfileSettingActivity에 자동 로그아웃 함수 구현
+```kotlin
+  private fun initAutoLogout(){
+        SOPTSharedPreferences.init(this)
+        binding.tvLogout.setOnClickListener {
+            SOPTSharedPreferences.setLogout(this)
+            finishAffinity()
+            startActivity(Intent(this,SignInActivity::class.java))
+        }
+    }
+```
+
+## 👍배운점 
+:heavy_check_mark: : 그동안 pref의 변수를 액티비티안에서 활용해서 자동로그인을 함수를 구현했는데 액티비티 로직을 더 짧게 줄이는 방식을 배워볼 수 있었습니다. 
+:heavy_check_mark: 항상 쓰지만 자세히는 몰랐던 확장함수의 개념에 대해 알게 되었습니다.
+
+## 👎의문점/개선점
+❓: Room 활용을 못해본 것이 아쉽다... 종강하고 다시 봐야겠다. 
+❓: VIewModel을 초반에 잘못 이해해서 프로젝트 구조가 이상한데 .. 셤 끝나구 다시 개선해야겠다. 
+
 # Seminar4
 ## 1️⃣ 필수과제
 ## 로그인/회원가입 API 연동
@@ -622,7 +675,7 @@ app:layout_constraintDimensionRatio="1:1"
 | 2주차 | ☑️ | ☑️ | Fragment와 RecyclerView |
 | 3주차 | ☑️ | ☑️ | 앱 내 디자인 적용하는 법 |
 | 4주차 | ☑️ | ☑️ | Retrofit2로 서버와 통신하기 |
-| 5주차 |  |  | 클라이언트 & 디자인 합동 세미나 |
-| 6주차 |  |  | 클라이언트 & 서버 합동 세미나 + 솝커톤 |
-| 7주차 |  |  | 확장 함수와 영속성 데이터 |
-| 8주차 |  |  | 협업을 위한 팁과 유용한 라이브러리 소개 |
+| 5주차 | ☑️ | ☑️ | 클라이언트 & 디자인 합동 세미나 |
+| 6주차 | ☑️ | ☑️ | 클라이언트 & 서버 합동 세미나 + 솝커톤 |
+| 7주차 | ☑️ | ☑️ | 확장 함수와 영속성 데이터 |
+| 8주차 | ☑️ | ☑️ | 협업을 위한 팁과 유용한 라이브러리 소개 |
