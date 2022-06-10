@@ -1,6 +1,5 @@
 package com.jiyeon.soptseminar.network
 
-import com.google.gson.annotations.SerializedName
 import com.jiyeon.soptseminar.data.reponse.ResponseSignIn
 import com.jiyeon.soptseminar.data.reponse.ResponseSignUp
 import com.jiyeon.soptseminar.data.request.RequestSignIn

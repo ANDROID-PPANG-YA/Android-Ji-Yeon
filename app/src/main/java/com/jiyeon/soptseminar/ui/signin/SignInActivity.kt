@@ -17,6 +17,7 @@ import com.jiyeon.soptseminar.databinding.ActivitySignInBinding
 import com.jiyeon.soptseminar.network.ServiceCreator
 import com.jiyeon.soptseminar.ui.MainActivity
 import com.jiyeon.soptseminar.ui.signup.SignUpActivity
+import com.jiyeon.soptseminar.util.SOPTSharedPreferences
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -38,7 +39,11 @@ class SignInActivity : AppCompatActivity() {
         initLoginBtn()
         initSignUpBtn()
 
+        isAutoLogin() // 자동 로그인 체크
+
     }
+
+    // 자동 로그인 체크
 
     // 로그인 버튼 이벤트
     private fun initLoginBtn() {
@@ -52,6 +57,19 @@ class SignInActivity : AppCompatActivity() {
             } else { // 공백 o
                 Toast.makeText(this, "아이디/비밀번호를 확인해주세요", Toast.LENGTH_SHORT).show()
             }
+        }
+    }
+
+    // 자동로그인 체크
+    private fun isAutoLogin(){
+        SOPTSharedPreferences.init(this)
+
+        if(SOPTSharedPreferences.getAutoLogin(this)){
+
+            Toast.makeText(this, "자동로그인 되었습니다.", Toast.LENGTH_SHORT).show()
+
+            // MainActivity 이동
+            startActivity(Intent(this@SignInActivity, MainActivity::class.java))
         }
     }
 
@@ -100,6 +118,9 @@ class SignInActivity : AppCompatActivity() {
 
                     // MainActivity 이동
                     startActivity(Intent(this@SignInActivity, MainActivity::class.java))
+
+                    // 자동 로그인 연결
+                    SOPTSharedPreferences.setAutoLogin(true)
 
                 } else { // 로그인 실패
                     when (response.code()) {

@@ -13,6 +13,15 @@
         <entry key="..\:/Users/Lenovo/SoptSeminar/app/src/main/res/layout/activity_sign_up.xml" value="0.2" />
         <entry key="..\:/Users/Lenovo/SoptSeminar/app/src/main/res/layout/fragment_camera.xml" value="0.1" />
         <entry key="..\:/Users/Lenovo/SoptSeminar/app/src/main/res/layout/fragment_home.xml" value="0.19429347826086957" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.24375" />
+        <entry key="app/src/main/res/layout/activity_navi.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_profile_setting.xml" value="0.24270833333333333" />
+        <entry key="app/src/main/res/layout/activity_sign_in.xml" value="0.24375" />
+        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.24375" />
+        <entry key="app/src/main/res/layout/fragment_profile.xml" value="0.10625" />
+        <entry key="app/src/main/res/layout/fragment_sample1.xml" value="0.20416666666666666" />
+        <entry key="app/src/main/res/layout/fragment_sample2.xml" value="0.20416666666666666" />
+        <entry key="app/src/main/res/layout/fragment_sample3.xml" value="0.20416666666666666" />
       </map>
     </option>
   </component>

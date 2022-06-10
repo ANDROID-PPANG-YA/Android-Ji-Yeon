@@ -1,5 +1,6 @@
 package com.jiyeon.soptseminar.ui.profile
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import com.jiyeon.soptseminar.R
@@ -14,8 +15,15 @@ class ProfileFragment : BaseFragment<FragmentProfileBinding>(R.layout.fragment_p
         super.onViewCreated(view, savedInstanceState)
 
         initTransFragmentEvent()
+        initSettingEvent()
     }
 
+    // 자동로그인 해제
+    private fun initSettingEvent(){
+        binding.ibtnSetting.setOnClickListener{
+            startActivity(Intent(requireContext(),ProfileSettingActivity::class.java))
+        }
+    }
 
     // Fragment 초기화
     private fun initTransFragmentEvent() {
